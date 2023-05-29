@@ -1,1 +1,115 @@
-<p>skills works!</p>
+
+<div class="card mt-5">
+  <p-card header="Skills">
+    <p-tabView styleClass="tabview-custom">
+        <p-tabPanel>
+            <ng-template pTemplate="header">
+                <i class="pi pi-calendar"></i>
+                <span>Frontend</span>
+            </ng-template>
+
+            <div class="card">
+              <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+                  <ng-template let-product pTemplate="item">
+                      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                          <div class="mb-3">
+                              <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+                          </div>
+                          <div>
+                              <h4 class="mb-1">{{ product.name }}</h4>
+                              <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                              <div class="car-buttons mt-5">
+                                  <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                                  <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                              </div>
+                          </div>
+                      </div>
+                  </ng-template>
+              </p-carousel>
+            </div>
+
+        </p-tabPanel>
+        <p-tabPanel header="Backend">
+            <ng-template pTemplate="header">
+                <i class="pi pi-user"></i>
+                <span>Backend</span>
+            </ng-template>
+            <div class="card">
+              <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+                  <ng-template let-product pTemplate="item">
+                      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                          <div class="mb-3">
+                              <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+                          </div>
+                          <div>
+                              <h4 class="mb-1">{{ product.name }}</h4>
+                              <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                              <div class="car-buttons mt-5">
+                                  <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                                  <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                              </div>
+                          </div>
+                      </div>
+                  </ng-template>
+              </p-carousel>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="Databases">
+            <ng-template pTemplate="header">
+                <i class="pi pi-search"></i>
+                <span>Databases</span>
+                <i class="pi pi-cog"></i>
+            </ng-template>
+            <div class="card">
+              <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+                  <ng-template let-product pTemplate="item">
+                      <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                          <div class="mb-3">
+                              <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+                          </div>
+                          <div>
+                              <h4 class="mb-1">{{ product.name }}</h4>
+                              <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                              <div class="car-buttons mt-5">
+                                  <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                                  <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                              </div>
+                          </div>
+                      </div>
+                  </ng-template>
+              </p-carousel>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="Tools">
+          <ng-template pTemplate="header">
+              <i class="pi pi-search"></i>
+              <span>Tools</span>
+              <i class="pi pi-cog"></i>
+          </ng-template>
+          <div class="card">
+            <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+                <ng-template let-product pTemplate="item">
+                    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                        <div class="mb-3">
+                            <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-6 shadow-2" />
+                        </div>
+                        <div>
+                            <h4 class="mb-1">{{ product.name }}</h4>
+                            <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+                            <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+                            <div class="car-buttons mt-5">
+                                <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                                <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+          </div>
+      </p-tabPanel>
+    </p-tabView>
+  </p-card>
+</div>

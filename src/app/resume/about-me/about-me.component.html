@@ -1,1 +1,23 @@
-<p>about-me works!</p>
+<div class="card mt-5">
+  <p-splitter [panelSizes]="[25, 75]" [style]="{ height: '300px' }" styleClass="mb-5">
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">
+            <img src="/assets/img/profile-picture.jpg" alt="">
+          </div>
+      </ng-template>
+      <ng-template pTemplate>
+          <div class="col flex align-items-center justify-content-center">
+            <h2>Anderson Bello</h2>
+          </div>
+      </ng-template>
+  </p-splitter>
+</div>
+
+<div class="card">
+  <p-card header="About me">
+    <p class="m-0">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+        quas!
+    </p>
+  </p-card>
+</div>
